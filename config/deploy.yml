@@ -1,0 +1,27 @@
+development:
+  host: localhost:3000
+  handle: mysterious-farm-8088
+  email: tonycarballeira@gmail.com
+  api_key: f17e4ce9a482ea77dccb7087091fa0cac1deaa89
+staging: 
+  host: localhost:3000
+  handle: mysterious-farm-8088
+  email: tonycarballeira@gmail.com	
+  api_key: f17e4ce9a482ea77dccb7087091fa0cac1deaa89
+production:
+  host: localhost:3000
+  handle: mysterious-farm-8088
+  email: tonycarballeira@gmail.com
+  api_key: f17e4ce9a482ea77dccb7087091fa0cac1deaa89
+
+local:
+  host: localhost:3000
+  handle: mysterious-farm-8088
+  email: tonycarballeira@gmail.com
+  api_key: f17e4ce9a482ea77dccb7087091fa0cac1deaa89
+
+live:
+  host: localhost:3000
+  handle: mysterious-farm-8088
+  email: tonycarballeira@gmail.com
+  api_key: f17e4ce9a482ea77dccb7087091fa0cac1deaa89

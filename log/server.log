@@ -1,0 +1,22 @@
+server.logI, [2016-02-23T18:32:00.783605 #25183]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-23T18:32:00.792908 #25183]  INFO -- : Maximum connections set to 1024
+I, [2016-02-23T18:32:00.792967 #25183]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2016-02-23T18:32:52.758015 #25183]  INFO -- : Waiting for 6 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+I, [2016-02-24T10:45:27.396079 #25831]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-24T10:45:27.408265 #25831]  INFO -- : Maximum connections set to 1024
+I, [2016-02-24T10:45:27.408331 #25831]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2016-02-25T11:05:09.500773 #63827]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-25T11:05:09.513126 #63827]  INFO -- : Maximum connections set to 1024
+I, [2016-02-25T11:05:09.513190 #63827]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2016-02-25T12:09:40.857752 #65420]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-25T12:09:40.869849 #65420]  INFO -- : Maximum connections set to 1024
+I, [2016-02-25T12:09:40.869934 #65420]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2016-02-25T17:10:30.729296 #68142]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-25T17:10:30.742204 #68142]  INFO -- : Maximum connections set to 1024
+I, [2016-02-25T17:10:30.742275 #68142]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2016-02-26T11:49:12.910266 #70540]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-26T11:49:12.921848 #70540]  INFO -- : Maximum connections set to 1024
+I, [2016-02-26T11:49:12.921920 #70540]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2016-02-26T11:57:29.555130 #70667]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2016-02-26T11:57:29.567157 #70667]  INFO -- : Maximum connections set to 1024
+I, [2016-02-26T11:57:29.567233 #70667]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop

@@ -1,0 +1,43 @@
+---
+title: Default layout
+is_layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.name }}</title>
+
+    <link rel="shortcut icon" href="{{ 'favicon.png' | theme_image_url }}">
+
+    {{ 'bootstrap.css' | stylesheet_tag }}
+    {{ 'style.css' | stylesheet_tag }}
+    {{ 'medical.css' | stylesheet_tag }}
+    {{ 'dark.css' | stylesheet_tag }}
+    {{ 'font-icons.css' | stylesheet_tag }}
+    {{ 'medical-icons.css' | stylesheet_tag }}
+    {{ 'animate.css' | stylesheet_tag }}
+    {{ 'magnific-popup.css' | stylesheet_tag }}
+    {{ 'fonts.css' | stylesheet_tag }}
+    {{ 'responsive.css' | stylesheet_tag }}
+    {{ 'colors.css' | stylesheet_tag }}
+    {{ 'application.css' | stylesheet_tag }}
+    {{ 'jquery.js' | javascript_tag }}
+    {{ 'plugins.js' | javascript_tag }}
+  </head>
+  <body>
+    {% include 'nav' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footer' %}
+
+    
+    {{ 'functions.js' | javascript_tag }}
+    
+  </body>
+</html>

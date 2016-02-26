@@ -1,0 +1,35 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+
+@font-face {
+    font-family: 'font-icons';
+    src: url('/fonts/font-icons.eot');
+    src: url('/fonts/font-icons.eot?#iefix') format('eot'),
+         url('/fonts/font-icons.woff') format('woff'),
+         url('/fonts/font-icons.ttf') format('truetype'),
+         url('/fonts/font-icons.svg#font-icons') format('svg');
+}
+
+@font-face {
+    font-family: 'webfont-medical-icons';
+    src: url('/fonts/webfont-medical-icons.eot');
+    src: url('/fonts/webfont-medical-icons.eot?#iefix') format('eot'),
+         url('/fonts/webfont-medical-icons.woff') format('woff'),
+         url('/fonts/webfont-medical-icons.ttf') format('truetype'),
+         url('/fonts/webfont-medical-icons.svg#webfront-medical-icons') format('svg');
+}
+
+
