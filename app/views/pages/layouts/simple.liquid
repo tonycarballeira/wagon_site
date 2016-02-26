@@ -12,9 +12,18 @@ is_layout: true
 
       <div class="swiper-container swiper-parent">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" 
-          style="background-image: {% editable_file "banner", hint: "Upload a banner (perfect size: 2000px by 1333px)", priority: 1 %}url('/images/images/slider/1.jpg');">
-          {% endeditable_file %}
+
+
+          {% capture banner_url %}{% editable_file 'banner' %}{% endeditable_file %}{% endcapture %}
+
+
+          <div class="swiper-slide" style="background-image: url(
+          {% if banner_url != '' %}
+            {{ banner_url | image_tag }}
+          {% else %}
+            {{ 'images/slider/1.jpg' | theme_image_url }}
+          {% endif %});">
+          
             <div class="container clearfix">
               <div class="slider-caption slider-caption-right" style="max-width: 700px;">
                 <h2 data-caption-animate="flipInX">Team of Experts<span>.</span></h2>
@@ -22,7 +31,7 @@ is_layout: true
               </div>
             </div>
           </div>
-          <div class="swiper-slide" style="background-image: url('/images/images/slider/2.jpg');">
+          <div class="swiper-slide" style="background-image: url({{ 'images/slider/2.jpg' | theme_image_url }});">
             <div class="container clearfix">
               <div class="slider-caption">
                 <h2 data-caption-animate="zoomIn">Heart<span>Beat</span>.</h2>
@@ -32,6 +41,8 @@ is_layout: true
           </div>
         </div>
       </div>
+      
+
 
       {{ 'application.js' | javascript_tag }}
 
