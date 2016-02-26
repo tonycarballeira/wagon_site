@@ -6,18 +6,36 @@ is_layout: true
 
 {% block content %}
 
-  {% block header, short_name: true, priority: 1 %}
+  {% block image, short_name: true, priority: 1 %}
 
-    <div class="container">
-      <div class="jumbotron">
+    <section id="slider" class="swiper_wrapper full-screen clearfix">
 
-        {% editable_text jumbotron, rows: 5, priority: 1 %}
-          <h1>Wagon bootstrap Template</h1>
-          <p>This is a simple site with editable sections like this.</p>
-        {% endeditable_text %}
-
+      <div class="swiper-container swiper-parent">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" 
+          style="background-image: {% editable_file "banner", hint: "Upload a banner (perfect size: 2000px by 1333px)", priority: 1 %}url('/images/images/slider/1.jpg');">
+          {% endeditable_file %}
+            <div class="container clearfix">
+              <div class="slider-caption slider-caption-right" style="max-width: 700px;">
+                <h2 data-caption-animate="flipInX">Team of Experts<span>.</span></h2>
+                <p data-caption-animate="flipInX" data-caption-delay="500">Our Team of Doctors are specialized in Various Disciplines to make sure you get the Best Treatment.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('/images/images/slider/2.jpg');">
+            <div class="container clearfix">
+              <div class="slider-caption">
+                <h2 data-caption-animate="zoomIn">Heart<span>Beat</span>.</h2>
+                <p data-caption-animate="zoomIn" data-caption-delay="500">Care for your Loved Ones from the Experts in the Medical &amp; Hospitality Industry.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      {{ 'application.js' | javascript_tag }}
+
+    </section><!-- #slider end -->
 
   {% endblock %}
 
@@ -37,7 +55,7 @@ is_layout: true
 
         </div>
       </div>
-      
+
     {% endblock %}
   </div>
 

@@ -11,3 +11,51 @@
 // about supported directives.
 //
 
+
+jQuery(document).ready(function($){
+    var swiperSlider = new Swiper('.swiper-parent',{
+      paginationClickable: false,
+      slidesPerView: 1,
+      grabCursor: true,
+      autoplay: 5000,
+      loop: true,
+      onSwiperCreated: function(swiper){
+        $('[data-caption-animate]').each(function(){
+          var $toAnimateElement = $(this);
+          var toAnimateDelay = $(this).attr('data-caption-delay');
+          var toAnimateDelayTime = 0;
+          if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
+          if( !$toAnimateElement.hasClass('animated') ) {
+            $toAnimateElement.addClass('not-animated');
+            var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+            setTimeout(function() {
+              $toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+            }, toAnimateDelayTime);
+          }
+        });
+      },
+      onSlideChangeStart: function(swiper){
+        $('[data-caption-animate]').each(function(){
+          var $toAnimateElement = $(this);
+          var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+          $toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+        });
+      },
+      onSlideChangeEnd: function(swiper){
+        $('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
+          var $toAnimateElement = $(this);
+          var toAnimateDelay = $(this).attr('data-caption-delay');
+          var toAnimateDelayTime = 0;
+          if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
+          if( !$toAnimateElement.hasClass('animated') ) {
+            $toAnimateElement.addClass('not-animated');
+            var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+            setTimeout(function() {
+              $toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+            }, toAnimateDelayTime);
+          }
+        });
+      }
+    });
+  });
+
