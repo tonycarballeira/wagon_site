@@ -18,29 +18,110 @@ editable_elements:
   content/header/jumbotron: "<h1>Wagon bootstrap template</h1>\r\n      <p>This is
     a simple site with editable sections like this.</p>"
 ---
-{% extends 'layouts/simple' %}
+{% extends 'layouts/default' %}
 
-{% block content/main %}
+{% block content %}
 
-<div class="row">
-  <div class="col-lg-4">
-    {% editable_text first_column %}
-      <h2>Heading #1</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    {% endeditable_text %}
+<!-- Slider
+    ============================================= -->
+  
+  {% block slider, short_name: true, priority: 1 %}
+
+    <section id="slider" class="swiper_wrapper full-screen clearfix">
+
+      <div class="swiper-container swiper-parent">
+        <div class="swiper-wrapper">
+
+
+          <div class="swiper-slide" style="background-image: url(
+          {% editable_file 'image1' %}
+            /samples/slider/1.jpg
+          {% endeditable_file %});">
+          
+            <div class="container clearfix">
+              <div class="slider-caption slider-caption-right" style="max-width: 700px;">
+
+                
+                  <h2 data-caption-animate="flipInX">
+                    {% editable_text "header1" %}
+                      Team of Experts<span>.</span>
+                    {% endeditable_text %}    
+                  </h2>
+                
+
+                <p data-caption-animate="flipInX" data-caption-delay="500">
+
+                  {% editable_text "sub header1" %}
+                    Our Team of Doctors are specialized in Various Disciplines to make sure you get the Best Treatment.
+                  {% endeditable_text %}
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image: url(
+          {% editable_file 'image2' %}
+            /samples/slider/2.jpg
+          {% endeditable_file %});">
+
+            <div class="container clearfix">
+              <div class="slider-caption">
+
+                
+                  <h2 data-caption-animate="zoomIn">
+
+                    {% editable_text "header2" %}
+                      Heart<span>Beat</span>.
+                    {% endeditable_text %}
+
+                  </h2>
+                
+
+                <p data-caption-animate="zoomIn" data-caption-delay="500">
+                  {% editable_text "sub header2" %}
+                    Care for your Loved Ones from the Experts in the Medical &amp; Hospitality Industry.
+                  {% endeditable_text %}
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      
+
+
+      {{ 'application.js' | javascript_tag }}
+
+    </section>
+
+  {% endblock %}
+
+
+  <!-- #slider end -->
+
+
+  <div class="row">
+    <div class="col-lg-4">
+      {% editable_text first_column %}
+        <h2>Heading #1</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+      {% endeditable_text %}
+    </div>
+    <div class="col-lg-4">
+      {% editable_text second_column %}
+        <h2>Heading #</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      {% endeditable_text %}
+   </div>
+    <div class="col-lg-4">
+      {% editable_text third_column %}
+        <h2>Heading #3</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+      {% endeditable_text %}
+    </div>
   </div>
-  <div class="col-lg-4">
-    {% editable_text second_column %}
-      <h2>Heading #</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    {% endeditable_text %}
- </div>
-  <div class="col-lg-4">
-    {% editable_text third_column %}
-      <h2>Heading #3</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-    {% endeditable_text %}
-  </div>
-</div>
 
 {% endblock %}
