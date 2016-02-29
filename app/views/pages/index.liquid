@@ -221,72 +221,76 @@ editable_elements:
 
         <!-- #Info end -->
 
+        <!-- Contact Form
+    ============================================= -->
+
         <div class="section nopadding common-height dark topmargin-sm">
-          <div class="col-md-5" style="background-image: url(
+          <div class="col-md-5" style="background: url(
           {% editable_file 'image1' %}
             /samples/slider/1.jpg
-          {% endeditable_file %});">
+          {% endeditable_file %}) center center no-repeat; background-size: cover;">
             
-          </div>
+        </div>
+
           <div id="booking-appointment-form" class="col-md-7 nopadding">
             <div class="bgcolor col-padding">
+
+              {% model_form 'customer_messages', success: '/', error: '/' %}
+
+                {% if customer_message.errors %}
+                  <p>The following errors occured:</p>
+                  <ul>
+                  {% for error in customer_message.errors %}
+                    <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+
               <h2>Book an Appointment.</h2>
               <div id="medical-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
-              <form class="nobottommargin" id="template-medical-form" name="template-medical-form" action="demos/medical/include/appointment.php" method="post">
+             
                 <div class="col_two_third">
                   <label for="template-medical-name">Name:</label>
-                  <input type="text" id="template-medical-name" name="template-medical-name" class="form-control not-dark required" value="">
+                  <input type="text" id="template-medical-name" name="content[name]" value="{{customer_message.name}}" class="form-control not-dark required">
                 </div>
                 <div class="col_one_third col_last">
                   <label for="template-medical-phone">Phone:</label>
-                  <input type="text" id="template-medical-phone" name="template-medical-phone" class="form-control not-dark required" value="">
+                  <input type="text" id="template-medical-phone" name="content[phone]" value="{{customer_message.phone}}" class="form-control not-dark required">
                 </div>
                 <div class="clear"></div>
                 <div class="col_two_third">
                   <label for="template-medical-email">Email Address:</label>
-                  <input type="email" id="template-medical-email" name="template-medical-email" class="form-control not-dark required" value="">
+                  <input type="email" id="template-medical-email" name="content[email]" value="{{customer_message.email}}" class="form-control not-dark required">
                 </div>
                 <div class="col_one_third col_last">
                   <label for="template-medical-dob">Date of Birth:</label>
-                  <input type="text" id="template-medical-dob" name="template-medical-dob" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY">
+                  <input type="text" id="template-medical-dob" name="content[dob]" value="{{customer_message.dob}}" class="form-control not-dark required" placeholder="DD/MM/YYYY">
                 </div>
                 <div class="clear"></div>
                 <div class="col_two_fifth nobottommargin">
                   <div class="col_full">
                     <label for="template-medical-appoint-date">Appointment Date:</label>
-                    <input type="text" id="template-medical-appoint-date" name="template-medical-appoint-date" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY">
+                    <input type="text" id="template-medical-appoint-date" name="content[app_date]" value="{{customer_message.app_date}}" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY">
                   </div>
-                  <div class="col_full nobottommargin">
-                    <label for="template-medical-second-booking">Booked with us Before?</label><br>
-                    <label class="rightmargin-sm">
-                      <input type="radio" id="template-medical-second-booking" name="template-medical-second-booking" value="yes">
-                      Yes
-                    </label>
-                    <label>
-                      <input type="radio" name="template-medical-second-booking" value="no" checked>
-                      No
-                    </label>
-                  </div>
+                  
                 </div>
                 <div class="col_three_fifth nobottommargin col_last">
                   <label for="template-medical-message">Message:</label>
-                  <textarea id="template-medical-message" name="template-medical-message" class="form-control not-dark required" cols="30" rows="5"></textarea>
+                  <textarea id="template-medical-message" name="content[message]" class="form-control not-dark required" cols="30" rows="5">{{customer_message.message}}</textarea>
                 </div>
                 <div class="clear"></div>
-                <div class="col_full hidden">
-                  <input type="text" name="template-medical-botcheck" value="" />
-                </div>
-                <div class="col_full topmargin-sm nobottommargin">
-                  <button class="button button-rounded button-white button-light nomargin" type="submit" value="submit">Confirm Booking</button>
-                </div>
-                <div class="clear"></div>
-              </form>
-
-              <script type="text/javascript">
-
                 
+                <div class="col_full topmargin-sm nobottommargin">
+                  
+                  <button class="button button-rounded button-white button-light nomargin" type="submit" value="submit">Confirm Booking</button>
 
-              </script>
+                  {% endmodel_form %}
+
+                </div>
+                
+                <div class="clear"></div>
+              
+
             </div>
           </div>
         </div>
