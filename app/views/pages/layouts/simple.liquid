@@ -21,7 +21,15 @@ is_layout: true
           
             <div class="container clearfix">
               <div class="slider-caption slider-caption-right" style="max-width: 700px;">
-                <h2 data-caption-animate="flipInX">Team of Experts<span>.</span></h2>
+
+                
+                  <h2 data-caption-animate="flipInX">
+                    {% editable_text "header1", hint: "Description of this area." %}
+                      Team of Experts<span>.</span>
+                    {% endeditable_text %}    
+                  </h2>
+                
+
                 <p data-caption-animate="flipInX" data-caption-delay="500">Our Team of Doctors are specialized in Various Disciplines to make sure you get the Best Treatment.</p>
               </div>
             </div>
@@ -34,11 +42,21 @@ is_layout: true
 
             <div class="container clearfix">
               <div class="slider-caption">
-                <h2 data-caption-animate="zoomIn">Heart<span>Beat</span>.</h2>
+
+                
+                  <h2 data-caption-animate="zoomIn">
+
+                    {% editable_text "header2", hint: "Description of this area." %}
+                      Heart<span>Beat</span>.
+                    {% endeditable_text %}
+
+                  </h2>
+                
+
                 <p data-caption-animate="zoomIn" data-caption-delay="500">Care for your Loved Ones from the Experts in the Medical &amp; Hospitality Industry.</p>
               </div>
             </div>
-            
+
           </div>
 
         </div>
