@@ -219,10 +219,14 @@ editable_elements:
 
         </div>
 
+  {% endblock %}
+
         <!-- #Info end -->
 
         <!-- Contact Form
     ============================================= -->
+
+  {% block contact, short_name: true, priority: 1 %}
 
         <div class="section nopadding common-height dark topmargin-sm">
           <div class="col-md-5" style="background: url(
@@ -287,17 +291,18 @@ editable_elements:
                   {% endmodel_form %}
 
                 </div>
-                
+
                 <div class="clear"></div>
               
-
+  {% endblock %}
+  
             </div>
           </div>
         </div>
 
       </div>
     </div>
-  {% endblock %}
+  
 
 
 
