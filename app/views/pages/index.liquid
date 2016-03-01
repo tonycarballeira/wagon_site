@@ -295,11 +295,74 @@ editable_elements:
                 <div class="clear"></div>
               
   {% endblock %}
-  
+
             </div>
           </div>
         </div>
+  {% block testimonials, short_name: true, priority: 1 %}
+        <div class="container clearfix">
 
+          <div class="col_three_fifth">
+            <div class="accordion accordion-lg clearfix">
+
+              <div class="acctitle"><i class="acc-closed icon-medical-i-kidney color"></i><i class="acc-open icon-medical-kidney color"></i>Kidney Transplant</div>
+              <div class="acc_content clearfix">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+
+              <div class="acctitle"><i class="acc-closed icon-medical-i-respiratory color"></i><i class="acc-open icon-medical-respiratory color"></i>Pulmonary Treament</div>
+              <div class="acc_content clearfix">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
+
+              <div class="acctitle"><i class="acc-closed icon-medical-i-ophthalmology color"></i><i class="acc-open icon-medical-ophthalmology color"></i>Eye Care &amp; Lasik Surgery</div>
+              <div class="acc_content clearfix">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
+
+              <div class="acctitle"><i class="acc-closed icon-medical-i-ear-nose-throat color"></i><i class="acc-open icon-medical-ear-nose-throat color"></i>Ear, Nose &amp; Throat</div>
+              <div class="acc_content clearfix">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
+
+              <div class="acctitle"><i class="acc-closed icon-medical-i-cardiology color"></i><i class="acc-open icon-medical-cardiology color"></i>Cardiology Department</div>
+              <div class="acc_content clearfix">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
+
+            </div>
+          </div>
+
+          <div class="col_two_fifth col_last">
+            <h4>Patient Testimonials<span>.</span></h4>
+            <ul class="testimonials-grid grid-1 clearfix">
+              <li class="noleftpadding notoppadding">
+                <div class="testimonial">
+                  <div class="testi-image">
+                    <a href="#"><img src="{% editable_file 'image1' %}/samples/testimonials/1.jpg{% endeditable_file %}" alt="Customer Testimonails"></a>
+                  </div>
+
+                  <div class="testi-content">
+                    <p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
+                    <div class="testi-meta">
+                      John Doe
+                      <span>XYZ Inc.</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="noleftpadding nobottompadding">
+                <div class="testimonial">
+                  <div class="testi-image">
+                    <a href="#"><img src="{% editable_file 'image2' %}/samples/testimonials/2.jpg{% endeditable_file %}" alt="Customer Testimonails"></a>
+                  </div>
+                  <div class="testi-content">
+                    <p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
+                    <div class="testi-meta">
+                      Collis Ta'eed
+                      <span>Envato Inc.</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="clear"></div>
+            <a href="#" class="button button-mini button-rounded norightmargin fright">More Patient Feedbacks...</a>
+            <div class="clear"></div>
+          </div>
+
+        </div>
+  {% endblock %}
       </div>
     </div>
   
