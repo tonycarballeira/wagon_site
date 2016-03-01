@@ -293,12 +293,18 @@ editable_elements:
                 </div>
 
                 <div class="clear"></div>
-              
-  {% endblock %}
 
             </div>
           </div>
         </div>
+  {% endblock %}
+
+  <!-- #Contact end -->
+
+
+  <!-- Testimonials
+    ============================================= -->
+
   {% block testimonials, short_name: true, priority: 1 %}
         <div class="container clearfix">
 
@@ -324,7 +330,13 @@ editable_elements:
           </div>
 
           <div class="col_two_fifth col_last">
-            <h4>Patient Testimonials<span>.</span></h4>
+
+            <h4>
+              {% editable_text "test_header" %}
+                Patient Testimonials<span>.</span>
+              {% endeditable_text %}              
+            </h4>
+
             <ul class="testimonials-grid grid-1 clearfix">
               <li class="noleftpadding notoppadding">
                 <div class="testimonial">
@@ -333,12 +345,26 @@ editable_elements:
                   </div>
 
                   <div class="testi-content">
-                    <p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
+                  
+                    <p>
+                      {% editable_text "test1" %}
+                        Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!
+                      {% endeditable_text %}
+                    </p>
+
                     <div class="testi-meta">
-                      John Doe
-                      <span>XYZ Inc.</span>
+                      {% editable_text "test1_person" %}
+                        John Doe
+                      {% endeditable_text %}
+                      <span>
+                        {% editable_text "test1_company" %}
+                          XYZ Inc.
+                        {% endeditable_text %}
+                      </span>
                     </div>
+
                   </div>
+
                 </div>
               </li>
               <li class="noleftpadding nobottompadding">
@@ -347,10 +373,21 @@ editable_elements:
                     <a href="#"><img src="{% editable_file 'test_image2' %}/samples/testimonials_2.jpg{% endeditable_file %}" alt="Customer Testimonails"></a>
                   </div>
                   <div class="testi-content">
-                    <p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
+                    <p>
+                      {% editable_text "test1" %}
+                        Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!
+                      {% endeditable_text %}
+                    </p>
+
                     <div class="testi-meta">
-                      Collis Ta'eed
-                      <span>Envato Inc.</span>
+                      {% editable_text "test1_person" %}
+                        COLLIS TA'EED
+                      {% endeditable_text %}
+                      <span>
+                        {% editable_text "test1_company" %}
+                          Envato Inc.
+                        {% endeditable_text %}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -363,10 +400,9 @@ editable_elements:
 
         </div>
   {% endblock %}
+
+  <!-- #Testimonials end -->
+
       </div>
     </div>
-  
-
-
-
 {% endblock %}
