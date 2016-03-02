@@ -32,4 +32,21 @@
          url('/fonts/webfont-medical-icons.svg#webfront-medical-icons') format('svg');
 }
 
+.info_entry_table {
+    display: table;
+    margin: auto;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.info_entry_table div {
+    display: inline-table;
+    width: 33%;
+    margin-bottom: 30px;
+}
+
+.info_entry_table div p, h3 {
+    width: 280px;
+}
 

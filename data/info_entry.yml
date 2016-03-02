@@ -1,0 +1,29 @@
+- "Sample 1":
+    body: "Molestiae facere qui autem autem assumenda atque. Voluptatibus assumenda ipsum aspernatur corrupti maiores unde pariatur. Natus praesentium velit quo dolorem impedit nisi."
+    style_class: "Laborum qui deleniti odio qui eos nisi saepe odit."
+    # image: /samples/info_entry/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    body: "Vitae illo in culpa. Eum amet et sit sapiente eaque est atque. Placeat nesciunt aperiam fuga cupiditate. Sed delectus architecto aut quam molestias corporis eos."
+    style_class: "Non officia odio similique asperiores eaque voluptatem sunt."
+    # image: /samples/info_entry/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    body: "Enim voluptatem sit libero nostrum. Qui quisquam quae voluptatem at impedit tempora. Numquam sit tempore eos culpa."
+    style_class: "Voluptatem vel est ut aliquid ullam earum ex velit."
+    # image: /samples/info_entry/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    body: "Quo maiores et deserunt velit corrupti voluptate sequi. Quod adipisci odit alias sint explicabo. Suscipit maiores ipsa rerum quia."
+    style_class: "Ea consequatur rerum hic assumenda nulla."
+    # image: /samples/info_entry/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 5":
+    body: "Quo maiores et deserunt velit corrupti voluptate sequi. Quod adipisci odit alias sint explicabo. Suscipit maiores ipsa rerum quia."
+    style_class: "Ea consequatur rerum hic assumenda nulla."
+    # image: /samples/info_entry/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 6":
+    body: "Quo maiores et deserunt velit corrupti voluptate sequi. Quod adipisci odit alias sint explicabo. Suscipit maiores ipsa rerum quia."
+    style_class: "Ea consequatur rerum hic assumenda nulla."
+    # image: /samples/info_entry/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.

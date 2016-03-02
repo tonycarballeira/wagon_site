@@ -1,0 +1,9 @@
+- "Sample 1":
+    name: "Consequatur dolores aut eum corrupti praesentium dolores aut atque."
+    company: "Quis et labore ut molestiae omnis neque ipsum."
+    # image: /samples/testimonials/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    name: "Eligendi ut ab sunt esse."
+    company: "Ut vel odio totam eius dolor."
+    # image: /samples/testimonials/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
