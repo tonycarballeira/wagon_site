@@ -57,7 +57,25 @@ jQuery(document).ready(function($){
         });
       }
     });
-  });
+
+    var ocTeam = $("#oc-team");
+
+    ocTeam.owlCarousel({
+      responsive: {
+        320:{ items:1 },
+        480:{ items:2 },
+        768:{ items:3 },
+        992:{ items:3 },
+        1200:{ items:4 }
+      },
+      margin: 30,
+      nav: true,
+      navText: ['<i class="icon-ok-sign"></i>','<i class="icon-ok-sign"></i>'],
+      dots: true
+    });
+
+});
+
 
 
   

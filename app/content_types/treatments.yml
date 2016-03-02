@@ -8,7 +8,7 @@ slug: treatments
 description: A description of the content type for the editors
 
 # Slug of field used to identify entries by default, such as the title
-label_field_name: body
+label_field_name: name
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
 order_by: manually

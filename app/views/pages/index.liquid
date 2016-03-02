@@ -22,8 +22,7 @@ editable_elements:
 
 {% block content %}
 
-<!-- Slider
-    ============================================= -->
+<!-- Slider ============================================= -->
   
   {% block slider, short_name: true, priority: 1 %}
 
@@ -93,18 +92,17 @@ editable_elements:
       
 
 
-      {{ 'application.js' | javascript_tag }}
+      
 
     </section>
 
   {% endblock %}
 
 
-  <!-- #slider end -->
+<!-- #slider end -->
 
 
-  <!-- Info
-    ============================================= -->
+<!-- Info ============================================= -->
 
   {% block info, short_name: true, priority: 1 %}
 
@@ -139,10 +137,9 @@ editable_elements:
 
   {% endblock %}
 
-        <!-- #Info end -->
+<!-- #Info end -->
 
-        <!-- Contact Form
-    ============================================= -->
+<!-- Contact Form ß============================================= -->
 
   {% block contact, short_name: true, priority: 1 %}
 
@@ -217,75 +214,175 @@ editable_elements:
         </div>
   {% endblock %}
 
-  <!-- #Contact end -->
+<!-- #Contact end -->
 
 
-  <!-- Testimonials
-    ============================================= -->
+<!-- Testimonials ============================================= -->
 
-  {% block testimonials, short_name: true, priority: 1 %}
+  
         <div class="container clearfix">
 
-          <div class="col_three_fifth">
-            <div class="accordion accordion-lg clearfix">
+          {% block treatments, short_name: true, priority: 1 %}
 
-              <div class="acctitle"><i class="acc-closed icon-medical-i-kidney color"></i><i class="acc-open icon-medical-kidney color"></i>Kidney Transplant</div>
-              <div class="acc_content clearfix">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+            <div class="col_three_fifth">
+              <div class="accordion accordion-lg clearfix">
+
+                {% editable_model treatments, hint: 'some text' %}
+
+                  {% for treat in contents.treatments %}
+
+                    <div class="acctitle"><i class="acc-closed icon-medical-i-kidney color"></i><i class="acc-open icon-medical-kidney color"></i>{{treat.name}}</div>
+                    <div class="acc_content clearfix">{{treat.body}}</div>
+
+                  {% endfor %}
+
+                {% endeditable_model %}
+
+              </div>
+            </div>
+
+          {% endblock %}
+
+          {% block testimonials, short_name: true, priority: 1 %}
+
+            <div class="col_two_fifth col_last">
+
+              {% capture test_header %}
+                 {% editable_text "test_header" %}
+                    Patient Testimonials<span>.</span>
+                 {% endeditable_text %}
+              {% endcapture %}
+
+              <h4>
+                {{ test_header }}              
+              </h4>
+
+              <ul class="testimonials-grid grid-1 clearfix">
+
+                {% editable_model testimonials, hint: 'some text' %}
+
+                  {% for test in contents.testimonials %}
+
+                    <li class="noleftpadding notoppadding">
+                      <div class="testimonial">
+
+                        <div class="testi-image">
+                          <a href="#"><img src="{{test.image.url}}" alt="Customer Testimonails"></a>
+                        </div>
+
+                        <div class="testi-content">
+                          <p>{{test.body}}</p>
+                          <div class="testi-meta">
+                            {{test.name}}
+                            <span>{{test.company}}</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </li>
+
+                  {% endfor %}
+                {% endeditable_model %}
+
+              </ul>
+
+              <div class="clear"></div>
+              <a href="#" class="button button-mini button-rounded norightmargin fright">More Patient Feedbacks...</a>
+              <div class="clear"></div>
 
             </div>
-          </div>
-
-          <div class="col_two_fifth col_last">
-
-            {% capture test_header %}
-               {% editable_text "test_header" %}
-                  Patient Testimonials<span>.</span>
-               {% endeditable_text %}
-            {% endcapture %}
-
-            <h4>
-              {{ test_header }}              
-            </h4>
-
-            <ul class="testimonials-grid grid-1 clearfix">
-
-              {% editable_model testimonials, hint: 'some text' %}
-
-                {% for test in contents.testimonials %}
-
-                  <li class="noleftpadding notoppadding">
-                    <div class="testimonial">
-
-                      <div class="testi-image">
-                        <a href="#"><img src="{{test.image.url}}" alt="Customer Testimonails"></a>
-                      </div>
-
-                      <div class="testi-content">
-                        <p>{{test.body}}</p>
-                        <div class="testi-meta">
-                          {{test.name}}
-                          <span>{{test.company}}</span>
-                        </div>
-                      </div>
-
-                    </div>
-                  </li>
-
-                {% endfor %}
-              {% endeditable_model %}
-
-            </ul>
-
-            <div class="clear"></div>
-            <a href="#" class="button button-mini button-rounded norightmargin fright">More Patient Feedbacks...</a>
-            <div class="clear"></div>
-
-          </div>
-
+          {% endblock %}
         </div>
-  {% endblock %}
+        
+<!-- #Testimonials end -->
 
-  <!-- #Testimonials end -->
+<!-- Team ============================================= -->
+
+        <div class="container clearfix">
+          <div class="heading-block center nobottomborder">
+            <h3>Meet our Team of Specialists<span>.</span></h3>
+            <span>We make sure that your Life are in Good Hands.</span>
+          </div>
+
+          <div id="oc-team" class="owl-carousel team-carousel">
+            
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/1.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. John Doe</h4><span>Cardiologist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/2.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Bryan Mcguire</h4><span>Orthopedist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/3.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Mary Jane</h4><span>Neurologist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/4.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Silvia Bush</h4><span>Dentist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/6.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Hugh Baldwin</h4><span>Cardiologist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/7.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Erika Todd</h4><span>Neurologist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/8.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Randy Adams</h4><span>Dentist</span></div>
+              </div>
+            </div>
+
+            <div class="team">
+              <div class="team-image">
+                <img src="{{ 'images/doctors/9.jpg' | theme_image_url }}" alt="Dr. John Doe">
+              </div>
+              <div class="team-desc">
+                <div class="team-title"><h4>Dr. Alan Freeman</h4><span>Eye Specialist</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          {{ 'application.js' | javascript_tag }}
+          
+        </div>
 
       </div>
     </div>
