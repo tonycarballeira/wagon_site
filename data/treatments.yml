@@ -1,0 +1,16 @@
+- "Sample 1":
+    name: "Eligendi dolores rerum harum eaque placeat quis quaerat provident."
+    # image: /samples/treatments/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    name: "Praesentium nam quis repellendus velit autem qui est."
+    # image: /samples/treatments/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    name: "Expedita assumenda ut provident ut ut."
+    # image: /samples/treatments/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    name: "Esse blanditiis dolores fuga maxime."
+    # image: /samples/treatments/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

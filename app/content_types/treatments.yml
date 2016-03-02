@@ -1,8 +1,8 @@
 # Human readable name of this type
-name: Testimonials
+name: Treatments
 
 # Lowercase, underscored handle used to access this type
-slug: testimonials
+slug: treatments
 
 # Explanatory text displayed in the back-office
 description: A description of the content type for the editors
@@ -37,13 +37,6 @@ order_by: manually
 
 # A list describing each field
 fields: 
-- name: # The lowercase, underscored name of the field
-    label: Name # Human readable name of the field
-    type: string
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
-    
 - body: # The lowercase, underscored name of the field
     label: Body # Human readable name of the field
     type: text
@@ -52,8 +45,8 @@ fields:
     localized: false
     # text_formatting: html # html (uses rich text editor), markdown or text (uses plain text editor)
 
-- company: # The lowercase, underscored name of the field
-    label: Company # Human readable name of the field
+- name: # The lowercase, underscored name of the field
+    label: Name # Human readable name of the field
     type: string
     required: false
     hint: Explanatory text displayed in the back office
