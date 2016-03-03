@@ -111,27 +111,27 @@ editable_elements:
         
         <div class="container clearfix info_entry_table">
 
-        {% editable_model info_entry, hint: 'some text' %}
+          {% editable_model info_entry, hint: 'some text' %}
 
-            {% for entry in contents.info_entry %}
+              {% for entry in contents.info_entry %}
 
-              <div class="{{entry.style_class}}">
-                <div class="feature-box fbox-plain">
-                  
-                  <div class="fbox-icon" data-animate="bounceIn">
-                    <a href="#"><img src="{{entry.image.url}}"></a>
+                <div class="{{entry.style_class}}">
+                  <div class="feature-box fbox-plain">
+                    
+                    <div class="fbox-icon" data-animate="bounceIn">
+                      <a href="#"><img src="{{entry.image.url}}"></a>
+                    </div>
+
+                      <h3>{{entry.header}}</h3>
+                   
+                      <p>{{entry.body}}</p>
+                    
                   </div>
-
-                    <h3>{{entry.header}}</h3>
-                 
-                    <p>{{entry.body}}</p>
-                  
                 </div>
-              </div>
 
-            {% endfor %}
+              {% endfor %}
 
-        {% endeditable_model %}
+          {% endeditable_model %}
 
         </div>
 
@@ -166,6 +166,7 @@ editable_elements:
                 {% endif %}
 
               <h2>Book an Appointment.</h2>
+              
               <div id="medical-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
              
                 <div class="col_two_third">
@@ -384,10 +385,7 @@ editable_elements:
 
       {% endblock %}
 
-<!-- #Team end -->
-      
-
-        
+<!-- #Team end -->        
 
       </div>
       

@@ -1,8 +1,6 @@
 {% block footer, short_name: true, priority: 1 %}
 
-	<footer id="footer" style="background-color: #F5F5F5;border-top: 2px solid rgba(0,0,0,0.06);">
-
-		
+	<footer id="footer" style="background-color: #F5F5F5;border-top: 2px solid rgba(0,0,0,0.06);">		
 
 		<div class="container" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
 
@@ -93,6 +91,18 @@
 
 				</div>
 
+			 	{% capture phone %}
+               		{% editable_text "phone", line_break: false %}
+                  		(91) 22 55412474
+               		{% endeditable_text %}
+            	{% endcapture %}
+
+            	{% capture email %}
+               		{% editable_text "email", line_break: false %}
+                  		info@canvas.com
+               		{% endeditable_text %}
+            	{% endcapture %}
+
 				<div class="col_one_third col_last">
 
 					<div class="widget clear-bottommargin-sm clearfix">
@@ -102,14 +112,14 @@
 							<div class="col-md-12 bottommargin-sm">
 								<div class="footer-big-contacts">
 									<span>Call Us:</span>
-									{% editable_text "phone" %}(91) 22 55412474{% endeditable_text %} 
+									{{phone}} 
 								</div>
 							</div>
 
 							<div class="col-md-12 bottommargin-sm">
 								<div class="footer-big-contacts">
 									<span>Send an Email:</span>
-									{% editable_text "email" %}info@canvas.com{% endeditable_text %}
+									{{email}}
 								</div>
 							</div>
 
