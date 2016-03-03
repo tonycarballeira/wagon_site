@@ -296,93 +296,93 @@ editable_elements:
         
 <!-- #Testimonials end -->
 
+        <div class="section notopmargin">
+          <div class="container clearfix">
+
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="feature-box fbox-outline fbox-dark fbox-effect clearfix">
+                  <div class="fbox-icon">
+                    <a href="#"><i class="icon-stack i-alt"></i></a>
+                  </div>
+                  <div class="counter counter-small"><span data-from="100" data-to="23331" data-refresh-interval="200" data-speed="2500"></span>+</div>
+                  <h5 class="nomargin color">Clients Served</h5>
+                  <div class="visible-xs visible-sm bottommargin"></div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="feature-box fbox-outline fbox-dark fbox-effect clearfix">
+                  <div class="fbox-icon">
+                    <a href="#"><i class="icon-tint i-alt"></i></a>
+                  </div>
+                  <div class="counter counter-small"><span data-from="100" data-to="56841" data-refresh-interval="250" data-speed="2000"></span>+</div>
+                  <h5 class="nomargin color">X-Rays Done</h5>
+                  <div class="visible-xs visible-sm bottommargin"></div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="feature-box fbox-outline fbox-dark fbox-effect clearfix">
+                  <div class="fbox-icon">
+                    <a href="#"><i class="icon-tint i-alt"></i></a>
+                  </div>
+                  <div class="counter counter-small"><span data-from="100" data-to="332" data-refresh-interval="50" data-speed="3000"></span>+</div>
+                  <h5 class="nomargin color">Worldwide Staff</h5>
+                  <div class="visible-xs bottommargin"></div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="feature-box fbox-outline fbox-dark fbox-effect clearfix">
+                  <div class="fbox-icon">
+                    <a href="#"><i class="icon-text-width i-alt"></i></a>
+                  </div>
+                  <div class="counter counter-small"><span data-from="100" data-to="2213" data-refresh-interval="110" data-speed="3500"></span>+</div>
+                  <h5 class="nomargin color">Lives Saved</h5>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 <!-- Team ============================================= -->
+      {% block team_members, short_name: true, priority: 1 %}
 
         <div class="container clearfix">
+          
           <div class="heading-block center nobottomborder">
             <h3>Meet our Team of Specialists<span>.</span></h3>
             <span>We make sure that your Life are in Good Hands.</span>
           </div>
 
           <div id="oc-team" class="owl-carousel team-carousel">
+
+            {% editable_model team_members, hint: 'some text' %}
+
+              {% for member in contents.team_members %}
             
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/1.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. John Doe</h4><span>Cardiologist</span></div>
-              </div>
-            </div>
+                <div class="team">
+                  <div class="team-image">
+                    <img src="{{ member.image.url }}" alt="{{member.name}}">
+                  </div>
+                  <div class="team-desc">
+                    <div class="team-title"><h4>{{member.name}}</h4><span>{{member.role}}</span></div>
+                  </div>
+                </div>
 
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/2.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Bryan Mcguire</h4><span>Orthopedist</span></div>
-              </div>
-            </div>
+              {% endfor %}
 
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/3.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Mary Jane</h4><span>Neurologist</span></div>
-              </div>
-            </div>
-
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/4.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Silvia Bush</h4><span>Dentist</span></div>
-              </div>
-            </div>
-
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/6.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Hugh Baldwin</h4><span>Cardiologist</span></div>
-              </div>
-            </div>
-
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/7.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Erika Todd</h4><span>Neurologist</span></div>
-              </div>
-            </div>
-
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/8.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Randy Adams</h4><span>Dentist</span></div>
-              </div>
-            </div>
-
-            <div class="team">
-              <div class="team-image">
-                <img src="{{ 'images/doctors/9.jpg' | theme_image_url }}" alt="Dr. John Doe">
-              </div>
-              <div class="team-desc">
-                <div class="team-title"><h4>Dr. Alan Freeman</h4><span>Eye Specialist</span></div>
-              </div>
-            </div>
+            {% endeditable_model %}
 
           </div>
 
           {{ 'application.js' | javascript_tag }}
-          
+
         </div>
+
+      {% endblock %}
 
       </div>
     </div>

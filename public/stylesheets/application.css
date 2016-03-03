@@ -46,7 +46,7 @@
     margin-bottom: 30px;
 }
 
-.info_entry_table div p, h3 {
+.info_entry_table > div p  {
     width: 280px;
 }
 

@@ -1,0 +1,16 @@
+- "Sample 1":
+    role: "Praesentium quo autem cupiditate."
+    # image: /samples/team_members/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    role: "Ex molestiae et nihil autem quo natus."
+    # image: /samples/team_members/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    role: "Voluptatum voluptatem voluptatem eligendi."
+    # image: /samples/team_members/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    role: "Minima quia illum et."
+    # image: /samples/team_members/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
